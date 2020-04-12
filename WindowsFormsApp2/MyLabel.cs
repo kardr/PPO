@@ -7,12 +7,8 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    /// <summary>
-    /// Обычный элемент пользовательского интерфейса (текста) 
-    /// </summary>
     class MyLabel : Label
     {
-        //ид(номер) определенной строки
         public int Id { set; get; }
     }
 }
