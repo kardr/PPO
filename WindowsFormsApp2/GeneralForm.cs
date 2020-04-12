@@ -22,16 +22,6 @@ namespace WindowsFormsApp2
         public GeneralForm()
         {
             InitializeComponent();
-        }
-
-        private void GeneralForm_Load(object sender, EventArgs e)
-        {
-
-        }
-        /*
-        public GeneralForm()
-        {
-            InitializeComponent();
             myConnection = new OleDbConnection(connectString);
             myConnection.Open();
             table = new TablePostavki();
@@ -45,8 +35,6 @@ namespace WindowsFormsApp2
             dataGridView1.Visible = false;
 
         }
-        
-
         private void FillTable(List<Field> list)
         {
 
@@ -216,7 +204,56 @@ namespace WindowsFormsApp2
 
             this.Controls.Add(GW);
         }
+        
+        private void ActionOnFild(bool action)
+        {
+            if (action)
+            {
+                buttonDelete.Enabled = false;
+                buttonUpdate.Enabled = false;
+                buttonInsert.Enabled = true;
+            }
+            else
+            {
 
+                buttonDelete.Enabled = true;
+                buttonUpdate.Enabled = true;
+                buttonInsert.Enabled = false;
+            }
+        }
+        
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            FillTable(table.getFieldsSearsh(textBox1.Text.Trim())); 
+        }
+        
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            table.Delete();
+            FillTable(table.getFields());
+            ActionOnFild(true);
+        }
+
+        private void Cancle_Click(object sender, EventArgs e)
+        {
+            ActionOnFild(true);
+            table.ClearTextBoxes();
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            table.Update();
+            table.ClearTextBoxes();
+            FillTable(table.getFields());
+            ActionOnFild(true);
+        }
+
+        private void buttonInsert_Click(object sender, EventArgs e)
+        {
+            table.Insert();
+            FillTable(table.getFields());
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -227,7 +264,6 @@ namespace WindowsFormsApp2
             table.CreateUI(tableLayoutPanel2);
         }
 
-
         private void button2_Click(object sender, EventArgs e)
         {
             table = new TableAvtokran();
@@ -235,12 +271,6 @@ namespace WindowsFormsApp2
             FillTable(table.getFields());
             this.tableLayoutPanel2.Controls.Clear();
             table.CreateUI(tableLayoutPanel2);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            table.Insert();
-            FillTable(table.getFields());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -278,61 +308,16 @@ namespace WindowsFormsApp2
             this.tableLayoutPanel2.Controls.Clear();
             table.CreateUI(this.tableLayoutPanel2);
         }
-
         private void FillInfo(int my_id)
         {
             int k = GW.CurrentRow.Index;
             table.Fill(Convert.ToInt32(GW[0, k].Value));
             ActionOnFild(false);
         }
-
-        private void btmUpdate(object sender, EventArgs e)
-        {
-            table.Update();
-            table.ClearTextBoxes();
-            FillTable(table.getFields());
-            ActionOnFild(true);
-        }
-
-        private void BtmDelete(object sender, EventArgs e)
-        {
-            table.Delete();
-            FillTable(table.getFields());
-            ActionOnFild(true);
-        }
-
-        private void btmCancle(object sender, EventArgs e)
-        {
-            ActionOnFild(true);
-            table.ClearTextBoxes();
-        }
-
-        private void ActionOnFild(bool action)
-        {
-            if (action)
-            {
-                buttonDelete.Enabled = false;
-                buttonUpdate.Enabled = false;
-                buttonInsert.Enabled = true;
-            }
-            else
-            {
-
-                buttonDelete.Enabled = true;
-                buttonUpdate.Enabled = true;
-                buttonInsert.Enabled = false;
-            }
-        }
-
-
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            FillTable(table.getFieldsSearsh(textBox1.Text.Trim()));
-
-        } */
-
-
+        
     }
-
 }
+
+        
+    
 
