@@ -13,7 +13,7 @@ namespace WindowsFormsApp2
     public partial class GeneralForm : Form
     {
 
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\\kursova\\Sklad2.mdb;";
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\\kursova\\Sklad2.mdb;"; 
 
         private TableView table;
         private OleDbConnection myConnection;

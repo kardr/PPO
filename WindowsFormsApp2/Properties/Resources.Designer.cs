@@ -103,16 +103,6 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap excavator_512 {
-            get {
-                object obj = ResourceManager.GetObject("excavator-512", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap img_262258 {
             get {
                 object obj = ResourceManager.GetObject("img_262258", resourceCulture);
