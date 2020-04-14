@@ -26,35 +26,35 @@ namespace WindowsFormsApp2
             GW = new DataGridView();
             table.initialiaze(myConnection);
             FillTable(table.getFields());
-            this.tableLayoutPanel2.Controls.Clear();
-            table.CreateUI(tableLayoutPanel2);
+            this.input_Fields.Controls.Clear();
+            table.CreateUI(input_Fields);
 
             ActionOnFild(true);
-            dataGridView1.Visible = false;
+            Output_to_Form.Visible = false;
 
         }
         private void FillTable(List<Field> list)
         {
 
-            dataGridView1.Rows.Clear();
+            Output_to_Form.Rows.Clear();
             if (list.Count == 0)
             {
-                dataGridView1.RowCount = 1;
+                Output_to_Form.RowCount = 1;
                 GW.RowCount = 1;
             }
             else
             {
-                dataGridView1.RowCount = list.Count;
+                Output_to_Form.RowCount = list.Count;
                 GW.RowCount = list.Count;
             }
 
-            dataGridView1.ColumnCount = list[0].count;
+            Output_to_Form.ColumnCount = list[0].count;
 
             GW.ColumnCount = list[0].count;
-            GW.Size = dataGridView1.Size;
-            GW.Location = dataGridView1.Location;
+            GW.Size = Output_to_Form.Size;
+            GW.Location = Output_to_Form.Location;
             GW.RowHeadersVisible = false;
-            GW.BackgroundColor = dataGridView1.BackgroundColor;
+            GW.BackgroundColor = Output_to_Form.BackgroundColor;
 
             if (list[0] is Postavki)
             {
@@ -219,12 +219,6 @@ namespace WindowsFormsApp2
                 buttonInsert.Enabled = false;
             }
         }
-        
-        private void button11_Click_1(object sender, EventArgs e)
-        {
-            FillTable(table.getFieldsSearsh(textBox1.Text.Trim())); 
-        }
-        
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -252,67 +246,72 @@ namespace WindowsFormsApp2
             table.Insert();
             FillTable(table.getFields());
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            table = new TablePostavki();
-            table.initialiaze(myConnection);
-            FillTable(table.getFields());
-            this.tableLayoutPanel2.Controls.Clear();
-            table.CreateUI(tableLayoutPanel2);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            table = new TableAvtokran();
-            table.initialiaze(myConnection);
-            FillTable(table.getFields());
-            this.tableLayoutPanel2.Controls.Clear();
-            table.CreateUI(tableLayoutPanel2);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            table = new TableBuldozer();
-            table.initialiaze(myConnection);
-            FillTable(table.getFields());
-            this.tableLayoutPanel2.Controls.Clear();
-            table.CreateUI(this.tableLayoutPanel2);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            table = new TableSkavator();
-            table.initialiaze(myConnection);
-            FillTable(table.getFields());
-            this.tableLayoutPanel2.Controls.Clear();
-            table.CreateUI(this.tableLayoutPanel2);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            table = new TableGidrobur();
-            table.initialiaze(myConnection);
-            FillTable(table.getFields());
-            this.tableLayoutPanel2.Controls.Clear();
-            table.CreateUI(this.tableLayoutPanel2);
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            table = new TablePogruzki();
-            table.initialiaze(myConnection);
-            FillTable(table.getFields());
-            this.tableLayoutPanel2.Controls.Clear();
-            table.CreateUI(this.tableLayoutPanel2);
-        }
+    
         private void FillInfo(int my_id)
         {
             int k = GW.CurrentRow.Index;
             table.Fill(Convert.ToInt32(GW[0, k].Value));
             ActionOnFild(false);
         }
-        
+
+        private void buttonAvtokran_Click_1(object sender, EventArgs e)
+        {
+            table = new TableAvtokran();
+            table.initialiaze(myConnection);
+            FillTable(table.getFields());
+            this.input_Fields.Controls.Clear();
+            table.CreateUI(input_Fields);
+        }
+
+        private void buttonBuldozer_Click(object sender, EventArgs e)
+        {
+            table = new TableBuldozer();
+            table.initialiaze(myConnection);
+            FillTable(table.getFields());
+            this.input_Fields.Controls.Clear();
+            table.CreateUI(this.input_Fields);
+        }
+
+        private void buttonPostavki_Click(object sender, EventArgs e)
+        {
+            table = new TablePostavki();
+            table.initialiaze(myConnection);
+            FillTable(table.getFields());
+            this.input_Fields.Controls.Clear();
+            table.CreateUI(input_Fields);
+        }
+
+        private void buttonSkavator_Click(object sender, EventArgs e)
+        {
+            table = new TableSkavator();
+            table.initialiaze(myConnection);
+            FillTable(table.getFields());
+            this.input_Fields.Controls.Clear();
+            table.CreateUI(this.input_Fields);
+        }
+
+        private void buttonGidrobur_Click(object sender, EventArgs e)
+        {
+            table = new TableGidrobur();
+            table.initialiaze(myConnection);
+            FillTable(table.getFields());
+            this.input_Fields.Controls.Clear();
+            table.CreateUI(this.input_Fields);
+        }
+
+        private void buttonPogruzki_Click(object sender, EventArgs e)
+        {
+            table = new TablePogruzki();
+            table.initialiaze(myConnection);
+            FillTable(table.getFields());
+            this.input_Fields.Controls.Clear();
+            table.CreateUI(this.input_Fields);
+        }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            FillTable(table.getFieldsSearsh(Search_line.Text.Trim()));
+        }
     }
 }
 

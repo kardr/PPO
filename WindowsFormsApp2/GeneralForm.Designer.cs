@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonPostavki = new System.Windows.Forms.Button();
+            this.buttonAvtokran = new System.Windows.Forms.Button();
+            this.buttonBuldozer = new System.Windows.Forms.Button();
+            this.buttonSkavator = new System.Windows.Forms.Button();
+            this.buttonGidrobur = new System.Windows.Forms.Button();
+            this.buttonPogruzki = new System.Windows.Forms.Button();
+            this.Output_to_Form = new System.Windows.Forms.DataGridView();
+            this.Search_line = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.Cancle = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Search = new System.Windows.Forms.Button();
+            this.input_Fields = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Output_to_Form)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,87 +62,87 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonPostavki
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(354, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Поставщики";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonPostavki.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonPostavki.Location = new System.Drawing.Point(354, 21);
+            this.buttonPostavki.Name = "buttonPostavki";
+            this.buttonPostavki.Size = new System.Drawing.Size(86, 36);
+            this.buttonPostavki.TabIndex = 0;
+            this.buttonPostavki.Text = "Поставщики";
+            this.buttonPostavki.UseVisualStyleBackColor = false;
+            this.buttonPostavki.Click += new System.EventHandler(this.buttonPostavki_Click);
             // 
-            // button2
+            // buttonAvtokran
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button2.Location = new System.Drawing.Point(139, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Автокраны";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAvtokran.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonAvtokran.Location = new System.Drawing.Point(139, 21);
+            this.buttonAvtokran.Name = "buttonAvtokran";
+            this.buttonAvtokran.Size = new System.Drawing.Size(85, 36);
+            this.buttonAvtokran.TabIndex = 1;
+            this.buttonAvtokran.Text = "Автокраны";
+            this.buttonAvtokran.UseVisualStyleBackColor = false;
+            this.buttonAvtokran.Click += new System.EventHandler(this.buttonAvtokran_Click_1);
             // 
-            // button3
+            // buttonBuldozer
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(244, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Бульдозеры";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonBuldozer.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonBuldozer.Location = new System.Drawing.Point(244, 21);
+            this.buttonBuldozer.Name = "buttonBuldozer";
+            this.buttonBuldozer.Size = new System.Drawing.Size(88, 36);
+            this.buttonBuldozer.TabIndex = 2;
+            this.buttonBuldozer.Text = "Бульдозеры";
+            this.buttonBuldozer.UseVisualStyleBackColor = false;
+            this.buttonBuldozer.Click += new System.EventHandler(this.buttonBuldozer_Click);
             // 
-            // button4
+            // buttonSkavator
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button4.Location = new System.Drawing.Point(462, 21);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 36);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Экскаваторы";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonSkavator.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonSkavator.Location = new System.Drawing.Point(462, 21);
+            this.buttonSkavator.Name = "buttonSkavator";
+            this.buttonSkavator.Size = new System.Drawing.Size(86, 36);
+            this.buttonSkavator.TabIndex = 3;
+            this.buttonSkavator.Text = "Экскаваторы";
+            this.buttonSkavator.UseVisualStyleBackColor = false;
+            this.buttonSkavator.Click += new System.EventHandler(this.buttonSkavator_Click);
             // 
-            // button5
+            // buttonGidrobur
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button5.Location = new System.Drawing.Point(567, 21);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 36);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Гидробуры";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonGidrobur.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonGidrobur.Location = new System.Drawing.Point(567, 21);
+            this.buttonGidrobur.Name = "buttonGidrobur";
+            this.buttonGidrobur.Size = new System.Drawing.Size(85, 36);
+            this.buttonGidrobur.TabIndex = 4;
+            this.buttonGidrobur.Text = "Гидробуры";
+            this.buttonGidrobur.UseVisualStyleBackColor = false;
+            this.buttonGidrobur.Click += new System.EventHandler(this.buttonGidrobur_Click);
             // 
-            // button6
+            // buttonPogruzki
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button6.Location = new System.Drawing.Point(672, 21);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 36);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Погрузчики";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonPogruzki.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonPogruzki.Location = new System.Drawing.Point(672, 21);
+            this.buttonPogruzki.Name = "buttonPogruzki";
+            this.buttonPogruzki.Size = new System.Drawing.Size(84, 36);
+            this.buttonPogruzki.TabIndex = 5;
+            this.buttonPogruzki.Text = "Погрузчики";
+            this.buttonPogruzki.UseVisualStyleBackColor = false;
+            this.buttonPogruzki.Click += new System.EventHandler(this.buttonPogruzki_Click);
             // 
-            // dataGridView1
+            // Output_to_Form
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(139, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(617, 155);
-            this.dataGridView1.TabIndex = 0;
+            this.Output_to_Form.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Output_to_Form.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Output_to_Form.Location = new System.Drawing.Point(139, 63);
+            this.Output_to_Form.Name = "Output_to_Form";
+            this.Output_to_Form.Size = new System.Drawing.Size(617, 155);
+            this.Output_to_Form.TabIndex = 0;
             // 
-            // textBox1
+            // Search_line
             // 
-            this.textBox1.Location = new System.Drawing.Point(295, 479);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 20);
-            this.textBox1.TabIndex = 6;
+            this.Search_line.Location = new System.Drawing.Point(295, 479);
+            this.Search_line.Name = "Search_line";
+            this.Search_line.Size = new System.Drawing.Size(284, 20);
+            this.Search_line.TabIndex = 6;
             // 
             // buttonDelete
             // 
@@ -188,34 +188,34 @@
             this.Cancle.UseVisualStyleBackColor = false;
             this.Cancle.Click += new System.EventHandler(this.Cancle_Click);
             // 
-            // button11
+            // Search
             // 
-            this.button11.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button11.Location = new System.Drawing.Point(600, 479);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "Поиск";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click_1);
+            this.Search.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.Search.Location = new System.Drawing.Point(600, 479);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(75, 23);
+            this.Search.TabIndex = 11;
+            this.Search.Text = "Поиск";
+            this.Search.UseVisualStyleBackColor = false;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // tableLayoutPanel2
+            // input_Fields
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(156, 249);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 7;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(314, 197);
-            this.tableLayoutPanel2.TabIndex = 12;
+            this.input_Fields.ColumnCount = 2;
+            this.input_Fields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.input_Fields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.input_Fields.Location = new System.Drawing.Point(156, 249);
+            this.input_Fields.Name = "input_Fields";
+            this.input_Fields.RowCount = 7;
+            this.input_Fields.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.input_Fields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.input_Fields.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.input_Fields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.input_Fields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.input_Fields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.input_Fields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.input_Fields.Size = new System.Drawing.Size(314, 197);
+            this.input_Fields.TabIndex = 12;
             // 
             // label1
             // 
@@ -322,23 +322,23 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.input_Fields);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.Cancle);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonInsert);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Search_line);
+            this.Controls.Add(this.Output_to_Form);
+            this.Controls.Add(this.buttonPogruzki);
+            this.Controls.Add(this.buttonGidrobur);
+            this.Controls.Add(this.buttonSkavator);
+            this.Controls.Add(this.buttonBuldozer);
+            this.Controls.Add(this.buttonAvtokran);
+            this.Controls.Add(this.buttonPostavki);
             this.Name = "GeneralForm";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Склад строительной техники";
+            ((System.ComponentModel.ISupportInitialize)(this.Output_to_Form)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -352,22 +352,22 @@
 
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonPostavki;
+        private System.Windows.Forms.Button buttonAvtokran;
+        private System.Windows.Forms.Button buttonBuldozer;
+        private System.Windows.Forms.Button buttonSkavator;
+        private System.Windows.Forms.Button buttonGidrobur;
+        private System.Windows.Forms.Button buttonPogruzki;
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView Output_to_Form;
+        private System.Windows.Forms.TextBox Search_line;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button Cancle;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.TableLayoutPanel input_Fields;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
